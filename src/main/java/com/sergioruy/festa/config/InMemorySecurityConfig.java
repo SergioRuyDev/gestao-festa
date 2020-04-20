@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder builder)
             throws Exception {

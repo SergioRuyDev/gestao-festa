@@ -21,41 +21,38 @@
         <div class="panel panel-default" style="margin: 10px">
             <div class="panel-heading">
                 <h1 class="panel-title">Lista de convidados</h1>
-        </div>
-            <form class="form-inline" method="post" th:object="${convidado}" th:action="@{/convidados}" style="margin: 20px 0">
-                <div class="form-group">
-                    <input type="text" class="form-control"
-                    placeholder="Nome"
-                    th:field="*{nome}"/>
-                    <input type="text" class="form-control"
-                    placeholder="Acompanhantes"
-                    th:field="*{quantidadeAcompanhantes}"/>
-                    <button type="submit" class="btn btn-primary">Adicionar</button>
-                </div>
-            </form>
+            </div>
+
             <div class="panel-body">
+                <form class="form-inline" method="post" th:object="${convidado}" th:action="@{/convidados}" style="margin: 20px 0">
+                    <div class="form-group">
+                        <input type="text" class="form-control"
+                        placeholder="Nome"
+                        th:field="*{nome}"/>
+                        <input type="text" class="form-control"
+                        placeholder="Acompanhantes"
+                        th:field="*{quantidadeAcompanhantes}"/>
+                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                    </div>
+                </form>
+
+
                 <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Acompanhantes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="convidado : ${convidados}">
-                            <td th:text="${convidado.nome}">Joao</td>
-                            <td th:text="${convidado.quantidadeAcompanhantes}">3</td>
-                        </tr>
-                    </tbody>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Acompanhantes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="convidado : ${convidados}">
+                                <td th:text="${convidado.nome}"></td>
+                                <td th:text="${convidado.quantidadeAcompanhantes}"></td>
+                            </tr>
+                        </tbody>
                 </table>
             </div>
         </div>
-
-
-
-
-    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
     </body>
 </html>

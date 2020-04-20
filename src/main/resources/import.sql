@@ -7,5 +7,4 @@ INSERT INTO convidado (id, nome, quantidade_acompanhantes) VALUES (3, 'Pericles'
 
 INSERT INTO convidado (id, nome, quantidade_acompanhantes) VALUES (5, 'Andressa', 2);
 
-INSERT INTO convidado (id, nome, quantidade_acompanhantes) VALUES (6, 'Maria', 3);
 
